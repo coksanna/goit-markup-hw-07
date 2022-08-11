@@ -1,0 +1,99 @@
+.page-header { 
+    background-color:var(--primary-background-color);
+    border-bottom: 1px solid #ececec;
+}
+.page-header-container {
+    display: flex;
+    align-items: center;
+}
+.logo-header {
+    margin-right: 93px;
+    font-family: var(--secondary-font);
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.19;
+    letter-spacing: 0.03em;
+    color: var(--title-color);
+    }
+.web {
+    color: var(--accent-color);
+}    
+.menu-link {
+    display: block;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;    
+    color: var(--title-color);
+    transition: color var(--transition-dur-and-func);   
+    
+    $:hover,
+    $:focus {
+        color: var(--accent-color);
+    }
+}
+.menu {
+    position: relative;
+}
+.studio.current::after {
+    position: absolute;
+    content: "";
+    display: block;
+    bottom: -1px;
+    width: 48px;
+    height: 4px;
+    background-color: var(--accent-color);
+    border-radius: 2px;
+}
+.portfolio.current::after {
+    position: absolute;
+    content: "";
+    display: block;
+    bottom: 0;
+    width: 78px;
+    height: 4px;
+    background-color: var(--accent-color);
+    border-radius: 2px;
+}
+.contact-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    color: var(--primary-text-color);
+    transition: color var(--transition-dur-and-func);
+
+    &:hover,
+    &:focus {
+        color: var(--accent-color); 
+    }
+}
+.current {
+    color: var(--accent-color);
+}
+.menu {
+    display: flex;
+}
+.menu .item:not(:last-child) {
+    margin-right: 50px;
+}
+.contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+}
+.contact .item:not(:last-child) {
+    margin-right: 50px;
+}
+.contact .icon {
+    margin-right: 10px;
+    fill: currentColor;    
+}
