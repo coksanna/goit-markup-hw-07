@@ -1,15 +1,13 @@
-.clients-list {
+.clients__list {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 30px;
 }
-
-.clients-icon {
+.clients__icon {
     fill: currentColor;
 }
-
-.clients-link {    
+.clients__link {    
     max-width: 100%;
     max-height: 100%; 
     display: flex;

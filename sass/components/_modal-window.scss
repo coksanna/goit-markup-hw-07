@@ -26,7 +26,7 @@
     border-radius: 4px;
     padding: 40px;
 }
-.modal-close-button {
+.modal__close-button {
     position: absolute;
     top: 8px;
     right: 8px;
@@ -47,13 +47,11 @@
         border-color: var(--accent-color);
     }
 }
-
-
-.modal-close-button-icon {
+.modal__close-icon {
     transition: fill var(--transition-dur-and-func);
 
-    .modal-close-button:hover &,
-    .modal-close-button:focus & {
+    .modal__close-button:hover &,
+    .modal__close-button:focus & {
         fill: var(--accent-color);
     }
 }

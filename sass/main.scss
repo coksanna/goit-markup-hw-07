@@ -1,5 +1,6 @@
 @import './utils/variables';
 @import './utils/visually-hidden'; 
+@import './utils/mixins.scss';
 
 @import './base/common';
 @import './base/container';
@@ -14,5 +15,6 @@
 @import './layout/projects';
 @import './layout/footer';
 
+@import './components/logo';
 @import './components/modal-window';
 @import './components/modal-form';

@@ -2,42 +2,35 @@
     background-color:var(--primary-background-color);
     border-bottom: 1px solid #ececec;
 }
-.page-header-container {
+.page-header__container {
     display: flex;
     align-items: center;
 }
-.logo-header {
+.page-header__logo {
     margin-right: 93px;
-    font-family: var(--secondary-font);
-    font-weight: 700;
-    font-size: 26px;
-    line-height: 1.19;
-    letter-spacing: 0.03em;
     color: var(--title-color);
-    }
-.web {
-    color: var(--accent-color);
-}    
-.menu-link {
+}  
+.menu {
+    display: flex;
+    position: relative;
+} 
+.menu__link {
     display: block;
     padding-top: 32px;
     padding-bottom: 32px;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 1.14;
-    letter-spacing: 0.02em;    
+    @include font(500, 14px, 16px, 0.02em);
     color: var(--title-color);
     transition: color var(--transition-dur-and-func);   
     
-    $:hover,
-    $:focus {
+    &:hover,
+    &:focus {
         color: var(--accent-color);
     }
 }
-.menu {
-    position: relative;
+.menu__link_current {
+    color: var(--accent-color);
 }
-.studio.current::after {
+.studio.menu__link_current::after {
     position: absolute;
     content: "";
     display: block;
@@ -47,7 +40,7 @@
     background-color: var(--accent-color);
     border-radius: 2px;
 }
-.portfolio.current::after {
+.portfolio.menu__link_current::after {
     position: absolute;
     content: "";
     display: block;
@@ -57,16 +50,13 @@
     background-color: var(--accent-color);
     border-radius: 2px;
 }
-.contact-link {
+.contact__link {
     display: flex;
     justify-content: center;
     align-items: center;
     padding-top: 32px;
     padding-bottom: 32px;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 1.14;
-    letter-spacing: 0.02em;
+    @include font(500, 14px, 16px, 0.02em);
     color: var(--primary-text-color);
     transition: color var(--transition-dur-and-func);
 
@@ -75,13 +65,7 @@
         color: var(--accent-color); 
     }
 }
-.current {
-    color: var(--accent-color);
-}
-.menu {
-    display: flex;
-}
-.menu .item:not(:last-child) {
+.menu__item:not(:last-child) {
     margin-right: 50px;
 }
 .contact {
@@ -90,10 +74,10 @@
     align-items: center;
     margin-left: auto;
 }
-.contact .item:not(:last-child) {
+.contact__item:not(:last-child) {
     margin-right: 50px;
 }
-.contact .icon {
+.contact__icon {
     margin-right: 10px;
     fill: currentColor;    
 }
